@@ -120,14 +120,18 @@ int main()
 	int opcao=0; // Definição das variáveis
 	int laco=1;
 	char senhadigitada[10]="a";
+	int comparacao;
 	
 	printf("### Cartório da EBAC ###\n\n");
 	printf("Login de administrador!\n\n\ ");
 	printf("Digite a sua senha: ");
 	scanf("%s",senhadigitada);
 	
-	//if(senhadigitada[10] == "admin")
+	comparacao = strcmp(senhadigitada, "admin");
+		
+	if(comparacao == 0)
 	{
+		system("cls");
 		for(laco=1;laco=1;) // Instrução para o sistema operacional não encerrar o App. Pare encerrar usuário precisa clicar no X
 		{
 	
@@ -173,6 +177,6 @@ int main()
 				}
 		}				
 	}
-	//else
+	else
 		printf("senha incorreta!");
 }
